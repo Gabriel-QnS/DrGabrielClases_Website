@@ -1,4 +1,4 @@
-@import '../node_modules/bulma/css/bulma.min.css';
+@import './bulma/css/bulma.min.css';
 
 /* Bulma classes will handle the image sizing */
 
