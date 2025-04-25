@@ -12,3 +12,60 @@
 .has-border:hover {
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
 }
+
+/* Minimalist fixed footer navbar */
+.footer-navbar {
+  background: transparent;
+  box-shadow: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+  /* Remove any gap below */
+}
+.footer-navbar .navbar {
+  background: rgba(255,255,255,0.1);
+  border-top: 1px solid #eee;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
+  margin-bottom: 0 !important;
+  height: auto;
+  min-height: unset;
+  padding: 0;
+  display: flex;
+  align-items: stretch;
+}
+.footer-navbar .navbar-menu.is-active {
+  height: 100%;
+  align-items: stretch;
+}
+.footer-navbar .navbar-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.2rem;
+}
+.footer-navbar .icon {
+  font-size: 1.5rem;
+  color: #888;
+  transition: color 0.2s;
+}
+.footer-navbar .navbar-item:hover .icon,
+.footer-navbar .navbar-item:focus .icon {
+  color: #3273dc;
+}
+@media (max-width: 600px) {
+  .footer-navbar .icon {
+    font-size: 1.2rem;
+  }
+  .footer-navbar .navbar-item {
+    padding: 0.5rem 0.5rem;
+  }
+}
+body {
+  padding-bottom: 60px; /* Prevent content from being hidden behind navbar */
+  margin-bottom: 0;
+}
