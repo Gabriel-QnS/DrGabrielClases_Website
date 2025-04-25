@@ -13,6 +13,17 @@
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
 }
 
+/* Responsive: section#services as 2 columns/cards per row at >=1024px */
+@media (min-width: 1024px) {
+  #services.columns.is-multiline {
+    flex-wrap: wrap;
+  }
+  #services.columns.is-multiline > .column {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
 /* Minimalist fixed footer navbar */
 .footer-navbar {
   background: transparent;
@@ -65,7 +76,33 @@
     padding: 0.5rem 0.5rem;
   }
 }
+
+/* Center and margin-x for #misplataformas-div */
+#misplataformas-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Light gray border for all buttons in 'Mis Plataformas' section */
+#misplataformas-div .button,
+#misplataformas .button {
+  border: 6px solid #e0e0e0 !important;
+  box-sizing: border-box;
+}
+
+/* Max width for all main sections */
+section, main > section, .columns {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure body background fills beyond max-width */
 body {
-  padding-bottom: 60px; /* Prevent content from being hidden behind navbar */
+  padding-bottom: 60px;
   margin-bottom: 0;
+  background: #181A1B;
 }
